@@ -1,0 +1,32 @@
+.card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-areas: 
+    "image image"
+    "title title"
+    "desc desc"
+    "input btn";
+  border: 1px solid black;
+}
+
+.card_img {
+  grid-area: image;
+}
+
+.card_title {
+  grid-area: title;
+}
+
+.card_desc {
+  grid-area: desc;
+}
+
+.card_input {
+  grid-area: input;
+}
+
+.card_btn {
+  grid-area: btn;
+}
+
