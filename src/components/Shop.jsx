@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import Card from './Card.jsx';
+import styles from './Shop.module.css';
 
 function Shop() {
   const [products, setProducts] = useState(null);
@@ -8,7 +10,7 @@ function Shop() {
   useEffect(() => {
     async function getProducts() {
       try {
-        const response = await fetch("https://fakestoreapi.com/products");
+        const response = await fetch("https://fakestoreapi.com/products",{ mode: "cors" });
         if (!response.ok) {
           throw new Error(`Something went wrong... Status: ${response.status}`)
         }
@@ -23,7 +25,7 @@ function Shop() {
     }
 
     getProducts()
-  });
+  }, []);
 
   if (loading) {
     return <h1>Loading</h1>
@@ -36,6 +38,9 @@ function Shop() {
   return (
     <>
       <h1>The products have loaded!!</h1>
+      <div className={styles.products_container}>
+        {products.map(product => <Card key={product.id} product={product}/>)}
+      </div>
     </>
   )
 

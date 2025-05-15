@@ -1,32 +1,51 @@
 .card {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: 300px minmax(80px, auto) 1fr auto;
   grid-template-areas: 
     "image image"
     "title title"
     "desc desc"
     "input btn";
+  padding: 0.5em;
   border: 1px solid black;
 }
 
 .card_img {
   grid-area: image;
+  max-height: 100%;
+  object-fit: contain;
+  align-self: center;
+  justify-self: center;
+  border: 1px solid blue;
 }
 
 .card_title {
   grid-area: title;
+  text-align: center;
+  font-size: 0.8rem;
+  border: 1px solid green;
 }
 
 .card_desc {
   grid-area: desc;
+  font-size: 0.7rem;
 }
 
 .card_input {
   grid-area: input;
+  width: 80px;
+  align-self: center;
+  justify-self: center;
+}
+
+#amount {
+  
 }
 
 .card_btn {
   grid-area: btn;
+  align-self: center;
+  justify-self: center;
 }
 
