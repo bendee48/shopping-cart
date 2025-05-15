@@ -1,4 +1,3 @@
-import Card from '../components/Card'
 import Shop from '../components/Shop'
 
 function ShopPage() {

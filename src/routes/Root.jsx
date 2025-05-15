@@ -8,6 +8,7 @@ function Root() {
         <ul>
           <li><Link to={'/'}>Home</Link></li>
           <li><Link to={'shop'}>Shop</Link></li>
+          <li><Link to={'basket'}>Basket</Link><span>4</span></li>
         </ul>
       </nav>
       <div>

@@ -39,10 +39,6 @@
   justify-self: center;
 }
 
-#amount {
-  
-}
-
 .card_btn {
   grid-area: btn;
   align-self: center;
