@@ -3,7 +3,9 @@ import { useOutletContext } from "react-router-dom";
 import styles from './Card.module.css'
 
 function Card({product}) {
-  const handleAddToBasket = useOutletContext()
+  const { handleAddToBasket } = useOutletContext()
+  
+  // no need for amount input to be state, using ref instead
   const inputRef = useRef()
 
   function handleSubmit(e) {
@@ -19,6 +21,7 @@ function Card({product}) {
       <p className={styles.card_desc}>{product.description}</p>
       <p>{product.price}</p>
       <form onSubmit={handleSubmit}>
+        {/* use defaultValue to access current value from ref */}
         <input className={styles.card_input} id={styles.amount} type="number" ref={inputRef} defaultValue="1"/>
         <button className={styles.card_btn} onClick={handleSubmit}>Add to Basket</button>
       </form>

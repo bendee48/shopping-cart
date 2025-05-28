@@ -17,13 +17,11 @@ function App() {
     setBasket([...basket, {...product, quantity: Number(quantity)}])
   }
 
-  console.log(basket)
-
   return (
     <>
       <Navbar basketCount={basketCount}/>
       <div>
-        <Outlet context={handleAddToBasket}/>
+        <Outlet context={{basket, handleAddToBasket}}/>
       </div>
     </>
   )
