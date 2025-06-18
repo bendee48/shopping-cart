@@ -1,8 +1,8 @@
 import { useRef } from 'react'
 import { useOutletContext } from "react-router-dom";
-import styles from './Card.module.css'
+import styles from './ShopCard.module.css'
 
-function Card({product}) {
+function ShopCard({product}) {
   const { handleAddToBasket } = useOutletContext()
   
   // no need for amount input to be state, using ref instead
@@ -29,4 +29,4 @@ function Card({product}) {
   )
 }
 
-export default Card;
+export default ShopCard;

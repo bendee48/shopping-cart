@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Card from './Card.jsx';
+import ShopCard from './ShopCard.jsx';
 import styles from './Shop.module.css';
 
 function Shop() {
@@ -39,7 +39,7 @@ function Shop() {
     <>
       <h1>The products have loaded!!</h1>
       <div className={styles.products_container}>
-        {products.map(product => <Card key={product.id} product={product}/>)}
+        {products.map(product => <ShopCard key={product.id} product={product}/>)}
       </div>
     </>
   )
