@@ -1,5 +1,7 @@
 .basket_card {
   display: flex;
+  height: 8rem;
+  align-items: center;
   gap: 1em;
   border: 1px solid blue;
 }

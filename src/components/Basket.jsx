@@ -1,4 +1,4 @@
-import { useOutletContext } from "react-router-dom";
+import { useOutletContext, Link } from "react-router-dom";
 import BasketCard from "./BasketCard";
 import styles from "./Basket.module.css"
 
@@ -11,6 +11,16 @@ function Basket() {
     return basket.reduce((sum, prod) => {
       return sum += prod.quantity * prod.price;
     }, 0)
+  }
+
+  if (basket.length == 0) {
+    return (
+      <>
+        <h1>Your basket is currently empty</h1>
+        <p>Go to <Link to={'/shop'}>Shop</Link></p>
+      </>
+
+    )
   }
 
   return (
