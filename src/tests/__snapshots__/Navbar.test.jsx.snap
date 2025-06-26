@@ -1,0 +1,35 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`NavBar Component > renders the Navbar 1`] = `
+<div>
+  <nav>
+    <ul>
+      <li>
+        <a
+          data-discover="true"
+          href="/"
+        >
+          Home
+        </a>
+      </li>
+      <li>
+        <a
+          data-discover="true"
+          href="/shop"
+        >
+          Shop
+        </a>
+      </li>
+      <li>
+        <a
+          data-discover="true"
+          href="/basket"
+        >
+          Basket
+        </a>
+        <span />
+      </li>
+    </ul>
+  </nav>
+</div>
+`;

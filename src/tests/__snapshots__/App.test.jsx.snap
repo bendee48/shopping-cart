@@ -1,0 +1,38 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`App Component > renders the App 1`] = `
+<div>
+  <nav>
+    <ul>
+      <li>
+        <a
+          data-discover="true"
+          href="/"
+        >
+          Home
+        </a>
+      </li>
+      <li>
+        <a
+          data-discover="true"
+          href="/shop"
+        >
+          Shop
+        </a>
+      </li>
+      <li>
+        <a
+          data-discover="true"
+          href="/basket"
+        >
+          Basket
+        </a>
+        <span>
+          0
+        </span>
+      </li>
+    </ul>
+  </nav>
+  <div />
+</div>
+`;

@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { render, screen } from "@testing-library/react"
-import Shop from "../routes/Shop"
+import Shop from "../components/Shop"
 
 describe('test 1', () => {
   it('should be true', () => {
@@ -10,8 +10,8 @@ describe('test 1', () => {
 
 describe('testing component rendering', () => {
   it('displays component', () => {
-    render(<Shop />)
-  
+    const foo = render(<Shop />)
+    
     screen.debug()
   })
 })
