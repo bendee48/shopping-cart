@@ -22,7 +22,7 @@ describe('App Component', () => {
       </MemoryRouter>
     );
 
-    // check Home link from NavBar is displayed
+    // check NavBar is displayed by finding home link
     expect(screen.getByRole('link', { name: /home/i })).toBeInTheDocument();
   })
 })

@@ -10,9 +10,7 @@ describe('test 1', () => {
 
 describe('testing component rendering', () => {
   it('displays component', () => {
-    const foo = render(<Shop />)
-    
-    screen.debug()
+    render(<Shop />)
   })
 })
 

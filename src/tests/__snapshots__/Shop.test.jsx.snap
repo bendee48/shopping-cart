@@ -1,0 +1,9 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Shop component > renders the Shop 1`] = `
+<div>
+  <h1>
+    Loading
+  </h1>
+</div>
+`;

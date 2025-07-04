@@ -4,7 +4,7 @@ import styles from './ShopCard.module.css'
 
 function ShopCard({product}) {
   const { handleAddToBasket } = useOutletContext()
-  
+  console.log(product, 'here!')
   // no need for amount input to be state, using ref instead
   const inputRef = useRef()
 

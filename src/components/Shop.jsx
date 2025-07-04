@@ -5,7 +5,7 @@ import styles from './Shop.module.css';
 function Shop() {
   const [products, setProducts] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null)
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     async function getProducts() {
@@ -15,6 +15,7 @@ function Shop() {
           throw new Error(`Something went wrong... Status: ${response.status}`)
         }
         const data = await response.json();
+        console.log(data, 'great success')
         setProducts(data)
       } catch(e) {
         setError(e.message)
