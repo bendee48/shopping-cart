@@ -7,7 +7,6 @@ function Basket() {
   const basketTotal = calcTotal()
 
   function calcTotal() {
-    console.log(basket)
     return basket.reduce((sum, prod) => {
       return sum += prod.quantity * prod.price;
     }, 0)

@@ -2,7 +2,6 @@ import { describe, it, expect, vi } from 'vitest';
 import { render, screen, act } from "@testing-library/react"
 import { MemoryRouter } from 'react-router-dom';
 import Shop from '../components/Shop';
-import ShopCard from '../components/ShopCard';
 
 // Mock ShopCard component
 vi.mock('../components/ShopCard', () => {
@@ -32,10 +31,13 @@ describe('Shop component', () => {
   })
 
   it('displays products', async () => {
-    const products = [{id: 1, title: 'T-Shirt', description: 'A red t-shirt', price: '£10.99'}];
+    const products = [
+      {id: 1, title: 'T-Shirt', description: 'A red t-shirt', price: 10.99},
+      {id: 2, title: 'Beanie', description: 'A blue beanie', price: 4.99},
+    ];
 
     // mock the fetch request
-    global.fetch = vi.fn(() => {
+    const mockFetch = vi.fn(() => {
       return Promise.resolve({
         ok: '500',
         json: () => {
@@ -44,12 +46,13 @@ describe('Shop component', () => {
       })
     });
 
+    vi.stubGlobal('fetch', mockFetch)
+
     // act runs state updates and enqueued effects (useEffect)
     await act(() => {
       render(<MemoryRouter><Shop /></MemoryRouter>);
     })
     
-    screen.debug()
     expect(screen.getByText('A red t-shirt')).toBeInTheDocument();
   })
 })

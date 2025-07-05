@@ -1,0 +1,136 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ShopCard component > renders a ShopCard 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="_card_fad0e2"
+      >
+        <img
+          alt="T-Shirt"
+          class="_card_img_fad0e2"
+          src="tshirt.jpg"
+        />
+        <h2
+          class="_card_title_fad0e2"
+        >
+          T-Shirt
+        </h2>
+        <p
+          class="_card_desc_fad0e2"
+        >
+          A red t-shirt
+        </p>
+        <p>
+          10.99
+        </p>
+        <form>
+          <input
+            class="_card_input_fad0e2"
+            id="_amount_fad0e2"
+            min="1"
+            type="number"
+            value="1"
+          />
+          <button
+            class="_card_btn_fad0e2"
+          >
+            Add to Basket
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="_card_fad0e2"
+    >
+      <img
+        alt="T-Shirt"
+        class="_card_img_fad0e2"
+        src="tshirt.jpg"
+      />
+      <h2
+        class="_card_title_fad0e2"
+      >
+        T-Shirt
+      </h2>
+      <p
+        class="_card_desc_fad0e2"
+      >
+        A red t-shirt
+      </p>
+      <p>
+        10.99
+      </p>
+      <form>
+        <input
+          class="_card_input_fad0e2"
+          id="_amount_fad0e2"
+          min="1"
+          type="number"
+          value="1"
+        />
+        <button
+          class="_card_btn_fad0e2"
+        >
+          Add to Basket
+        </button>
+      </form>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

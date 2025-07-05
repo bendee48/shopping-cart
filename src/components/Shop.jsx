@@ -15,8 +15,7 @@ function Shop() {
           throw new Error(`Something went wrong... Status: ${response.status}`)
         }
         const data = await response.json();
-        console.log(data, 'great success')
-        setProducts(data)
+        setProducts(data);
       } catch(e) {
         setError(e.message)
         console.log(e)

@@ -4,7 +4,7 @@ import styles from './ShopCard.module.css'
 
 function ShopCard({product}) {
   const { handleAddToBasket } = useOutletContext()
-  console.log(product, 'here!')
+
   // no need for amount input to be state, using ref instead
   const inputRef = useRef()
 
@@ -22,8 +22,8 @@ function ShopCard({product}) {
       <p>{product.price}</p>
       <form onSubmit={handleSubmit}>
         {/* use defaultValue to access current value from ref */}
-        <input className={styles.card_input} id={styles.amount} type="number" ref={inputRef} defaultValue="1"/>
-        <button className={styles.card_btn} onClick={handleSubmit}>Add to Basket</button>
+        <input className={styles.card_input} id={styles.amount} type="number" min='1' ref={inputRef} defaultValue="1"/>
+        <button className={styles.card_btn}>Add to Basket</button>
       </form>
     </div>
   )
