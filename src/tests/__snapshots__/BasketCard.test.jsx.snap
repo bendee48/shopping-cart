@@ -1,0 +1,29 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`BasketCard component > renders a BasketCard 1`] = `
+<div>
+  <div
+    class="_basket_card_12a1d9"
+  >
+    <img
+      alt="Blue t-shirt"
+      class="_product_image_12a1d9"
+      src="t-shirt.jpg"
+    />
+    <h2
+      class="_product_title_12a1d9"
+    >
+      Blue t-shirt
+    </h2>
+    <p>
+      2
+       item
+      s
+    </p>
+    <p>
+      Total: £
+      23.98
+    </p>
+  </div>
+</div>
+`;

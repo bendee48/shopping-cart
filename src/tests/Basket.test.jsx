@@ -1,5 +1,5 @@
 import { expect, describe, it, vi } from 'vitest';
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import Basket from '../components/Basket';
 
@@ -30,7 +30,7 @@ describe('Basket Component', () => {
       const basket = [{id: 1, title: 'T-Shirt', description: 'A red t-shirt', price: 10.99, image: 'tshirt.jpg', quantity: 2}]
       basketMock.mockReturnValue(basket)
       const container = render(<MemoryRouter><Basket/></MemoryRouter>)
-      screen.debug() 
+      
       expect(container).toMatchSnapshot()
     })
   })
