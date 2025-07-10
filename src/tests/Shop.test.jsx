@@ -24,10 +24,29 @@ vi.mock('../components/ShopCard', () => {
 })
 
 describe('Shop component', () => {
-  it('renders the Shop', () => {
+  it('renders the component', () => {
     const { container } = render(<MemoryRouter><Shop /></MemoryRouter>)
-    
+  
     expect(container).toMatchSnapshot();
+  })
+
+  it('shows a loading message whilst fetching products', () => {
+    render(<MemoryRouter><Shop /></MemoryRouter>);
+    
+    expect(screen.getByRole('heading', { name: /loading/i })).toBeInTheDocument();
+  })
+
+  it('displays an error message if fetch fails', async () => {
+    const fetchFail = vi.fn(() => {
+      return Promise.reject(new Error('Oh shit'))
+    });
+    vi.stubGlobal('fetch', fetchFail);
+
+    await act(async () => {
+      render(<MemoryRouter><Shop /></MemoryRouter>);
+    })
+
+    expect(screen.getByRole('heading', { name: /something has gone wrong/i })).toBeInTheDocument();
   })
 
   it('displays products', async () => {
@@ -39,7 +58,7 @@ describe('Shop component', () => {
     // mock the fetch request
     const mockFetch = vi.fn(() => {
       return Promise.resolve({
-        ok: '500',
+        ok: true,
         json: () => {
           return Promise.resolve(products)
         }
@@ -49,10 +68,11 @@ describe('Shop component', () => {
     vi.stubGlobal('fetch', mockFetch)
 
     // act runs state updates and enqueued effects (useEffect)
-    await act(() => {
+    await act(async () => {
       render(<MemoryRouter><Shop /></MemoryRouter>);
     })
-    
+
+    expect(screen.getAllByRole('heading', { level: 2 })).toHaveLength(2);
     expect(screen.getByText('A red t-shirt')).toBeInTheDocument();
   })
 })

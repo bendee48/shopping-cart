@@ -27,7 +27,11 @@ exports[`NavBar Component > renders the Navbar 1`] = `
         >
           Basket
         </a>
-        <span />
+        <span
+          aria-label="basket-count"
+        >
+          0
+        </span>
       </li>
     </ul>
   </nav>

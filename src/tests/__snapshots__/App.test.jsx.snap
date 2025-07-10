@@ -27,7 +27,9 @@ exports[`App Component > renders the App 1`] = `
         >
           Basket
         </a>
-        <span>
+        <span
+          aria-label="basket-count"
+        >
           0
         </span>
       </li>

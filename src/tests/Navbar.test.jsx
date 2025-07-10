@@ -7,17 +7,17 @@ describe('NavBar Component', () => {
   it('renders the Navbar', () => {
     const { container } = render(
       <MemoryRouter>
-        <Navbar/>  
+        <Navbar />  
       </MemoryRouter>
     );
-
+    
     expect(container).toMatchSnapshot();
   })
 
   it('displays the Navbar\'s links', () => {
     render(
       <MemoryRouter>
-        <Navbar/>  
+        <Navbar />  
       </MemoryRouter>
     );
 
@@ -33,7 +33,7 @@ describe('NavBar Component', () => {
       </MemoryRouter>
     );
     
-    expect(screen.getByText('3')).toBeInTheDocument();
+    expect(screen.getByLabelText('basket-count')).toHaveTextContent('3');
   })
 })
 
