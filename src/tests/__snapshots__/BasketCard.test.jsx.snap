@@ -4,6 +4,7 @@ exports[`BasketCard component > renders a BasketCard 1`] = `
 <div>
   <div
     class="_basket_card_12a1d9"
+    data-testid="basket-card"
   >
     <img
       alt="Blue t-shirt"

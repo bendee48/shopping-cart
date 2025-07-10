@@ -4,7 +4,7 @@ import styles from "./Basket.module.css"
 
 function Basket() {
   const { basket } = useOutletContext()
-  const basketTotal = calcTotal()
+  let basketTotal = null;
 
   function calcTotal() {
     return basket.reduce((sum, prod) => {
@@ -20,12 +20,14 @@ function Basket() {
       </>
 
     )
+  } else {
+    basketTotal = calcTotal();
   }
 
   return (
     <div className={styles.basket}>
       { basket.map(product => <BasketCard key={product.id} product={product} />) }
-      <div className={styles.basket_total}>Total: £{basketTotal}</div>
+      <div data-testid='basket-total' className={styles.basket_total}>Total: £{basketTotal}</div>
     </div>
   )
 }
