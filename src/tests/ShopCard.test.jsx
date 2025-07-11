@@ -23,9 +23,37 @@ describe('ShopCard component', () => {
 
     expect(container).toMatchSnapshot();
   })
+
+  it('displays a picture for the product', () => {
+    const product =  {id: 1, title: 'T-Shirt', description: 'A red t-shirt', price: 10.99, image: 'tshirt.jpg' }
+    render(<MemoryRouter><ShopCard product={product}/></MemoryRouter>)
+    
+    expect(screen.getByRole('img', { name: 'T-Shirt'})).toBeInTheDocument();
+  })
+
+  it('displays a title for the product', () => {
+    const product =  {id: 1, title: 'T-Shirt', description: 'A red t-shirt', price: 10.99, image: 'tshirt.jpg' }
+    render(<MemoryRouter><ShopCard product={product}/></MemoryRouter>)
+    
+    expect(screen.getByRole('heading', { level: 2, name: 'T-Shirt'})).toBeInTheDocument();
+  })
+
+  it('displays a description for the product', () => {
+    const product =  {id: 1, title: 'T-Shirt', description: 'A red t-shirt', price: 10.99, image: 'tshirt.jpg' }
+    render(<MemoryRouter><ShopCard product={product}/></MemoryRouter>)
+    
+    expect(screen.getByText('A red t-shirt')).toBeInTheDocument();
+  })
+
+  it('displays the product price', () => {
+    const product =  {id: 1, title: 'T-Shirt', description: 'A red t-shirt', price: 10.99, image: 'tshirt.jpg' }
+    render(<MemoryRouter><ShopCard product={product}/></MemoryRouter>)
+
+    expect(screen.getByText('£10.99')).toBeInTheDocument()
+  })
   
   describe('Adding product to basket button', () => {
-    it('calls the handleAddToBasket function', async () => {
+    it('calls the handleAddToBasket function with correct product and quantity', async () => {
       const user = userEvent.setup();
   
       const product = {id: 1, title: 'T-Shirt', description: 'A red t-shirt', price: 10.99, image: 'tshirt.jpg'}
@@ -35,6 +63,22 @@ describe('ShopCard component', () => {
       await user.click(addButton);
   
       expect(handleAddToBasketMock).toHaveBeenCalledWith(product, '1')
+    })
+
+    it('calls the handleAddToBasket function with an updated quantity', async () => {
+      const user = userEvent.setup();
+
+      const product = {id: 1, title: 'T-Shirt', description: 'A red t-shirt', price: 10.99, image: 'tshirt.jpg'}
+      render(<MemoryRouter><ShopCard product={product}/></MemoryRouter>);
+
+      const quantityInput = screen.getByRole('spinbutton');
+      await user.clear(quantityInput);
+      await user.type(quantityInput, '3')
+
+      const addButton = screen.getByRole('button');
+      await user.click(addButton);
+      
+      expect(handleAddToBasketMock).toHaveBeenCalledWith(product, '3')
     })
   })
 })

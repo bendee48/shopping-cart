@@ -24,6 +24,7 @@ exports[`ShopCard component > renders a ShopCard 1`] = `
           A red t-shirt
         </p>
         <p>
+          £
           10.99
         </p>
         <form>
@@ -63,6 +64,7 @@ exports[`ShopCard component > renders a ShopCard 1`] = `
         A red t-shirt
       </p>
       <p>
+        £
         10.99
       </p>
       <form>
