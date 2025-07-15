@@ -2,7 +2,6 @@ import { describe, it, expect } from 'vitest';
 import { render, screen } from "@testing-library/react"
 import { MemoryRouter } from 'react-router-dom';
 import App from '../components/App'
-import Navbar from '../components/Navbar';
 
 describe('App Component', () => {
   it('renders the App', () => {
@@ -22,7 +21,6 @@ describe('App Component', () => {
       </MemoryRouter>
     );
 
-    // check NavBar is displayed by finding home link
     expect(screen.getByTestId('navbar')).toBeInTheDocument();
   })
 })

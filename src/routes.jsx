@@ -5,7 +5,7 @@ import HomePage from './routes/HomePage'
 import ShopPage from './routes/ShopPage'
 import BasketPage from './routes/BasketPage'
 
-const router = createBrowserRouter([
+const routeConfig = [
   {
     path: '/',
     element: <Root />,
@@ -16,6 +16,8 @@ const router = createBrowserRouter([
       { path: 'basket', element: <BasketPage /> },
     ]
   },
-])
+]
 
-export default router;
+const router = createBrowserRouter(routeConfig);
+
+export { router, routeConfig };
