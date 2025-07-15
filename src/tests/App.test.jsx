@@ -23,6 +23,6 @@ describe('App Component', () => {
     );
 
     // check NavBar is displayed by finding home link
-    expect(screen.getByRole('link', { name: /home/i })).toBeInTheDocument();
+    expect(screen.getByTestId('navbar')).toBeInTheDocument();
   })
 })

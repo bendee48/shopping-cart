@@ -30,7 +30,7 @@ function App() {
       newBasket = [...newBasket, {...product, quantity: Number(quantity)}]
     }
     
-    setBasket(newBasket)
+    setBasket(newBasket);
   }
 
   return (

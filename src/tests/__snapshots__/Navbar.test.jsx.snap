@@ -2,7 +2,9 @@
 
 exports[`NavBar Component > renders the Navbar 1`] = `
 <div>
-  <nav>
+  <nav
+    data-testid="navbar"
+  >
     <ul>
       <li>
         <a
