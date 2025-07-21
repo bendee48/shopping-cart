@@ -34,6 +34,13 @@ a {
   color: inherit; /* Inherit text color from parent */
 }
 
+ul {
+  margin:0;
+  padding: 0;
+  text-indent: 0;
+  list-style-type: none;
+}
+
 /* button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -54,4 +61,12 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 } */
+
+/* Global Stylings */
+
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+}
 

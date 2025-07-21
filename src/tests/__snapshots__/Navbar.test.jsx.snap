@@ -3,38 +3,49 @@
 exports[`NavBar Component > renders the Navbar 1`] = `
 <div>
   <nav
+    class="_navbar_39d119"
     data-testid="navbar"
   >
-    <ul>
-      <li>
-        <a
-          data-discover="true"
-          href="/"
-        >
-          Home
-        </a>
-      </li>
-      <li>
-        <a
-          data-discover="true"
-          href="/shop"
-        >
-          Shop
-        </a>
-      </li>
-      <li>
-        <a
-          data-discover="true"
-          href="/basket"
-        >
-          Basket
-        </a>
-        <span
-          aria-label="basket-count"
-        >
-          0
-        </span>
-      </li>
+    <ul
+      class="_navbar_contents_39d119"
+    >
+      <div
+        class="_left_items_39d119"
+      >
+        <li>
+          <a
+            data-discover="true"
+            href="/"
+          >
+            Home
+          </a>
+        </li>
+        <li>
+          <a
+            data-discover="true"
+            href="/shop"
+          >
+            Shop
+          </a>
+        </li>
+      </div>
+      <div
+        class="_right_items_39d119"
+      >
+        <li>
+          <a
+            data-discover="true"
+            href="/basket"
+          >
+            Basket
+          </a>
+          <span
+            aria-label="basket-count"
+          >
+            0
+          </span>
+        </li>
+      </div>
     </ul>
   </nav>
 </div>

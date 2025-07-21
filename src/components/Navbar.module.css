@@ -1,0 +1,40 @@
+.navbar {
+  padding: 0.5em 0;
+  background: #5b4baa;
+  color: #fff;
+}
+
+.navbar_contents {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1em;
+}
+
+.items {
+  display: flex;
+  gap: 2em;
+}
+
+.items li:hover {
+  color: #000;
+}
+
+.left_items {
+  composes: items;
+}
+
+
+.right_items {
+  composes: items;
+}
+
+/* Basket */
+
+.basket_icon {
+  transition: transform 0.3s ease;
+}
+
+.basket_count {
+  font-size: 0.7rem;
+}

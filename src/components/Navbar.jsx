@@ -1,4 +1,7 @@
 import { Link } from "react-router-dom";
+import styles from './Navbar.module.css'
+import Icon from '@mdi/react';
+import { mdiBasket } from '@mdi/js';
 
 /**
  * A navigation bar component.
@@ -13,12 +16,29 @@ import { Link } from "react-router-dom";
  */
 function Navbar({basketCount = 0}) {
   return (
-    <nav data-testid='navbar'>
-      <ul>
-        <li><Link to={'/'}>Home</Link></li>
-        <li><Link to={'shop'}>Shop</Link></li>
-        <li><Link to={'basket'}>Basket</Link><span aria-label="basket-count">{basketCount}</span></li>
-      </ul>
+    <nav className={styles.navbar} data-testid='navbar'>
+      <div className="container">
+        <ul className={styles.navbar_contents}>
+          <div className={styles.left_items}>
+            <li><Link to={'/'}>Home</Link></li>
+            <li><Link to={'shop'}>Shop</Link></li>
+          </div>
+          <div className={styles.right_items}>
+            <li>
+              <Link to={'basket'}>
+                <Icon 
+                  path={mdiBasket}
+                  className={styles.basket_icon}
+                  title="Basket"
+                  size={1}
+                  color="currentColor"
+                />
+                <span className={styles.basket_count} aria-label="basket-count">{basketCount}</span>
+              </Link>
+            </li>
+          </div>
+        </ul>
+      </div>
     </nav>
   )
 }
