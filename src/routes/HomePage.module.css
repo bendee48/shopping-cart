@@ -17,6 +17,7 @@
   font-size: 3rem;
   position: relative;
   display: inline-block;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 .shop_btn::after,
@@ -44,5 +45,6 @@
 }
 
 .shop_btn:hover {
-  color: #4700b2;
+  color: #1e00b2;
+  background-color: rgba(152, 152, 254, 0.2);
 }
