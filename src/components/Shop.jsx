@@ -54,7 +54,6 @@ function Shop() {
 
   return (
     <>
-      <h1>The products have loaded!!</h1>
       <div className={styles.products_container}>
         {products.map(product => <ShopCard key={product.id} product={product}/>)}
       </div>

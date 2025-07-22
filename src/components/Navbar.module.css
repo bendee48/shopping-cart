@@ -11,29 +11,25 @@
   gap: 1em;
 }
 
-.items {
+.nav_items {
   display: flex;
   gap: 2em;
 }
 
-.items li:hover {
+.nav_items li:hover {
   color: #000;
 }
 
 .left_items {
-  composes: items;
+  composes: nav_items;
 }
 
 
 .right_items {
-  composes: items;
+  composes: nav_items;
 }
 
 /* Basket */
-
-.basket_icon {
-  transition: transform 0.3s ease;
-}
 
 .basket_count {
   font-size: 0.7rem;

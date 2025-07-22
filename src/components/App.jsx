@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Outlet } from "react-router-dom"
 import Navbar from '../components/Navbar'
+import styles from './app.module.css'
 
 function App() {
   const [basket, setBasket] = useState([]);
@@ -34,12 +35,12 @@ function App() {
   }
 
   return (
-    <>
+    <div className={styles.app}>
       <Navbar basketCount={basketCount}/>
-      <div>
+      <div className={styles.outlet}>
         <Outlet context={{basket, handleAddToBasket}}/>
       </div>
-    </>
+    </div>
   )
 }
 
