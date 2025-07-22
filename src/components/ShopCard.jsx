@@ -42,11 +42,11 @@ function ShopCard({product}) {
       <img className={styles.card_img} src={product.image} alt={product.title} />
       <h2 className={styles.card_title}>{product.title}</h2>
       <p className={styles.card_desc}>{product.description}</p>
-      <p>£{product.price}</p>
-      <form onSubmit={handleSubmit}>
+      <p className={styles.card_price}>£{product.price.toFixed(2)}</p>
+      <form className={styles.card_form} onSubmit={handleSubmit}>
         {/* use defaultValue to access current value from ref */}
         <input className={styles.card_input} id={styles.amount} type="number" min='1' ref={inputRef} defaultValue="1"/>
-        <button className={styles.card_btn}>Add to Basket</button>
+        <button className={styles.card_btn}>Add</button>
       </form>
     </div>
   )

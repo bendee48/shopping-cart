@@ -58,7 +58,7 @@ describe('App integration tests', () => {
     
     const shopLink = screen.getAllByRole('link', { name: /shop/i })
     await user.click(shopLink[0])
-    const addButton = screen.getByRole('button', { name: /add to basket/i })
+    const addButton = screen.getByRole('button', { name: /add/i })
     await user.click(addButton)
 
     expect(screen.getByLabelText('basket-count')).toHaveTextContent('1');
@@ -82,7 +82,7 @@ describe('App integration tests', () => {
     const shopLink = screen.getAllByRole('link', { name: /shop/i });
     await user.click(shopLink[0]);
 
-    const buttons = screen.getAllByRole('button', { name: /add to basket/i });
+    const buttons = screen.getAllByRole('button', { name: /add/i });
     await user.click(buttons[0]);
     await user.click(buttons[1]);
     
@@ -104,7 +104,7 @@ describe('App integration tests', () => {
     })));
 
     await user.click(screen.getAllByRole('link', { name: /shop/i })[0]);
-    await user.click(screen.getByRole('button', { name: /add to basket/i }));
+    await user.click(screen.getByRole('button', { name: /add/i }));
     await user.click(screen.getByRole('link', { name: /basket/i }));
     
     expect(screen.getByTestId('basket-page')).toBeInTheDocument();

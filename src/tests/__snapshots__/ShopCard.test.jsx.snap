@@ -23,11 +23,15 @@ exports[`ShopCard component > renders a ShopCard 1`] = `
         >
           A red t-shirt
         </p>
-        <p>
+        <p
+          class="_card_price_fad0e2"
+        >
           £
           10.99
         </p>
-        <form>
+        <form
+          class="_card_form_fad0e2"
+        >
           <input
             class="_card_input_fad0e2"
             id="_amount_fad0e2"
@@ -38,7 +42,7 @@ exports[`ShopCard component > renders a ShopCard 1`] = `
           <button
             class="_card_btn_fad0e2"
           >
-            Add to Basket
+            Add
           </button>
         </form>
       </div>
@@ -63,11 +67,15 @@ exports[`ShopCard component > renders a ShopCard 1`] = `
       >
         A red t-shirt
       </p>
-      <p>
+      <p
+        class="_card_price_fad0e2"
+      >
         £
         10.99
       </p>
-      <form>
+      <form
+        class="_card_form_fad0e2"
+      >
         <input
           class="_card_input_fad0e2"
           id="_amount_fad0e2"
@@ -78,7 +86,7 @@ exports[`ShopCard component > renders a ShopCard 1`] = `
         <button
           class="_card_btn_fad0e2"
         >
-          Add to Basket
+          Add
         </button>
       </form>
     </div>
