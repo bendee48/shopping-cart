@@ -2,8 +2,10 @@
 
 exports[`Shop component > renders the component 1`] = `
 <div>
-  <h1>
-    Loading
-  </h1>
+  <p
+    class="_message_39a490"
+  >
+    Loading...
+  </p>
 </div>
 `;

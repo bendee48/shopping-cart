@@ -33,7 +33,7 @@ describe('Shop component', () => {
   it('shows a loading message whilst fetching products', () => {
     render(<MemoryRouter><Shop /></MemoryRouter>);
     
-    expect(screen.getByRole('heading', { name: /loading/i })).toBeInTheDocument();
+    expect(screen.getByText(/loading/i)).toBeInTheDocument();
   })
 
   it('displays an error message if fetch fails', async () => {
@@ -46,7 +46,7 @@ describe('Shop component', () => {
       render(<MemoryRouter><Shop /></MemoryRouter>);
     })
 
-    expect(screen.getByRole('heading', { name: /something has gone wrong/i })).toBeInTheDocument();
+    expect(screen.getByText(/something has gone wrong/i)).toBeInTheDocument();
   })
 
   it('displays products', async () => {
