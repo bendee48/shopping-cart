@@ -45,11 +45,11 @@ function Shop() {
   }, []);
 
   if (loading) {
-    return <h1>Loading</h1>
+    return <p className={styles.message}>Loading...</p>
   }
 
   if (error) {
-    return <h1>Something has gone wrong...</h1>
+    return <p className={styles.message}>Something has gone wrong...</p>
   }
 
   return (
