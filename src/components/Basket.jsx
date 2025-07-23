@@ -37,8 +37,8 @@ function Basket() {
   if (basket.length == 0) {
     return (
       <>
-        <h1>Your basket is currently empty</h1>
-        <p>Go to <Link to={'/shop'}>Shop</Link></p>
+        <h1 className={styles.empty_basket_header}>Your basket is currently empty</h1>
+        <p className={styles.shop_link_text}>Go to <Link to={'/shop'} className={styles.shop_link}>Shop</Link></p>
       </>
 
     )

@@ -1,6 +1,6 @@
 .navbar {
   padding: 0.5em 0;
-  background: #5b4baa;
+  background: var(--main-purple);
   color: #fff;
 }
 

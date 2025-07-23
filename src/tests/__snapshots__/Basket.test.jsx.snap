@@ -5,12 +5,17 @@ exports[`Basket Component > without items in basket > renders the basket 1`] = `
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <h1>
+      <h1
+        class="_empty_basket_header_3d2bf3"
+      >
         Your basket is currently empty
       </h1>
-      <p>
+      <p
+        class="_shop_link_text_3d2bf3"
+      >
         Go to 
         <a
+          class="_shop_link_3d2bf3"
           data-discover="true"
           href="/shop"
         >
@@ -20,12 +25,17 @@ exports[`Basket Component > without items in basket > renders the basket 1`] = `
     </div>
   </body>,
   "container": <div>
-    <h1>
+    <h1
+      class="_empty_basket_header_3d2bf3"
+    >
       Your basket is currently empty
     </h1>
-    <p>
+    <p
+      class="_shop_link_text_3d2bf3"
+    >
       Go to 
       <a
+        class="_shop_link_3d2bf3"
         data-discover="true"
         href="/shop"
       >

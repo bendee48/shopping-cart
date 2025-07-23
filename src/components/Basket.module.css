@@ -10,3 +10,23 @@
   align-self: flex-end;
   font-weight: 700;
 }
+
+.empty_basket_header {
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 2em;
+}
+
+.shop_link_text {
+  text-align: center;
+  margin-top: 1em;
+}
+
+.shop_link {
+  font-style: italic;
+  color: var(--main-purple);
+}
+
+.shop_link:hover {
+  text-decoration: underline;
+}

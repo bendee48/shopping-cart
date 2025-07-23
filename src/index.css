@@ -4,6 +4,7 @@
   font-family: 'Ubuntu', sans-serif;
   font-size: 1.2rem;
   line-height: 1.5;
+  --main-purple: #5b4baa;
 }
 
 *, *::before, *::after {
