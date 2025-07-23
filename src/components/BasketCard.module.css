@@ -3,14 +3,23 @@
   height: 8rem;
   align-items: center;
   gap: 1em;
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
 }
 
-.product_image {
+.bcard_image {
   width: 100px;
+  max-height: 100%;
+}
+
+.bcard_title {
+  font-size: 0.9rem;
   margin-right: auto;
 }
 
-.product_title {
-  font-size: 1rem;
+.bcard_price {
+  font-size: 0.9rem;
+}
+
+.bcard_items {
+  font-size: 0.8rem;
 }

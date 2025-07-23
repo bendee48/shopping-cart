@@ -2,7 +2,7 @@ import Basket from '../components/Basket'
 
 function BasketPage() {
   return (
-    <div data-testid="basket-page">
+    <div className="container" data-testid="basket-page">
       <Basket />
     </div>
   )

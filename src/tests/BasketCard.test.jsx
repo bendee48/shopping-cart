@@ -20,9 +20,9 @@ describe('BasketCard component', () => {
     render(<MemoryRouter><BasketCard product={quantity2}/></MemoryRouter>);
   
     // quantity of 1
-    expect(screen.getByText(`Total: £11.99`)).toBeInTheDocument();
+    expect(screen.getByText(`£11.99`)).toBeInTheDocument();
     // quantity of 2
-    expect(screen.getByText(`Total: £${totalPrice}`)).toBeInTheDocument();
+    expect(screen.getByText(`£${totalPrice}`)).toBeInTheDocument();
   })
 
   it('displays correct pluralization', () => {

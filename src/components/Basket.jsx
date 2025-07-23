@@ -47,9 +47,10 @@ function Basket() {
   }
 
   return (
-    <div className={styles.basket}>
+    <div className={styles.basket_container}>
       { basket.map(product => <BasketCard key={product.id} product={product} />) }
-      <div data-testid='basket-total' className={styles.basket_total}>Total: £{basketTotal}</div>
+      <hr />
+      <div data-testid='basket-total' className={styles.basket_total}>Total: £{basketTotal.toFixed(2)}</div>
     </div>
   )
 }

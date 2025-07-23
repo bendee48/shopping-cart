@@ -8,21 +8,25 @@ exports[`BasketCard component > renders a BasketCard 1`] = `
   >
     <img
       alt="Blue t-shirt"
-      class="_product_image_12a1d9"
+      class="_bcard_image_12a1d9"
       src="t-shirt.jpg"
     />
     <h2
-      class="_product_title_12a1d9"
+      class="_bcard_title_12a1d9"
     >
       Blue t-shirt
     </h2>
-    <p>
+    <p
+      class="_bcard_items_12a1d9"
+    >
       2
        item
       s
     </p>
-    <p>
-      Total: £
+    <p
+      class="_bcard_price_12a1d9"
+    >
+      £
       23.98
     </p>
   </div>

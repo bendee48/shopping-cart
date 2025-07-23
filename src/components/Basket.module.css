@@ -1,5 +1,12 @@
-.basket {
+.basket_container {
   display: flex;
   flex-direction: column;
-  border: 1px solid red;
+  padding: 1em 0 3em 0;
+  gap: 1em;
+}
+
+.basket_total {
+  margin-top: 1em;
+  align-self: flex-end;
+  font-weight: 700;
 }
