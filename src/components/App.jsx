@@ -3,17 +3,43 @@ import { Outlet } from "react-router-dom"
 import Navbar from '../components/Navbar'
 import styles from './app.module.css'
 
+/**
+ * App component for the shopping cart application.
+ * Manages global basket state and provides it via Outlet context.
+ *
+ * @returns {JSX.Element} The main application layout with navbar and routed content.
+ */
 function App() {
+  /** 
+   * @typedef {Object} Product
+   * @property {number} id - Unique identifier of the product
+   * @property {string} title - Name of the product
+   * @property {string} image - Image url
+   * @property {number} quantity - Quantity of the product in the basket
+   * @property {number} price - Optional price of the product
+   */
+
+  /** @type {[Product[], Function]} */
   const [basket, setBasket] = useState([]);
   const basketCount = countItems();
 
-  // count the quantityt of each product in basket
+  /**
+   * Calculates the total number of items in the basket.
+   *
+   * @returns {number} Total quantity of all products in the basket.
+   */
   function countItems() {
     return basket.reduce((sum, item) => {
       return sum + item.quantity;
     }, 0)
   }
 
+  /**
+   * Adds a product to the basket or updates quantity if it already exists.
+   *
+   * @param {Product} product - The product to add or update.
+   * @param {number|string} quantity - Quantity to add to the basket.
+   */
   function handleAddToBasket(product, quantity) {
     let inBasket = false;
     // go through basket and add to quanitity if product is already in basket
@@ -34,11 +60,16 @@ function App() {
     setBasket(newBasket);
   }
 
+  function handleRemoveFromBasket(id) {
+    const filteredProducts = basket.filter(product => product.id != id);
+    setBasket(filteredProducts);
+  }
+
   return (
     <div className={styles.app}>
       <Navbar basketCount={basketCount}/>
       <div className={styles.outlet}>
-        <Outlet context={{basket, handleAddToBasket}}/>
+        <Outlet context={{basket, handleAddToBasket, handleRemoveFromBasket}}/>
       </div>
     </div>
   )

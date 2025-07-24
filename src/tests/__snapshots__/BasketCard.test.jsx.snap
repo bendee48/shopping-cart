@@ -29,6 +29,9 @@ exports[`BasketCard component > renders a BasketCard 1`] = `
       £
       23.98
     </p>
+    <button>
+      Del
+    </button>
   </div>
 </div>
 `;
