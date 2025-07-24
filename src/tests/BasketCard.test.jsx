@@ -25,6 +25,17 @@ describe('BasketCard component', () => {
     expect(screen.getByText(`£${totalPrice}`)).toBeInTheDocument();
   })
 
+  it('displays price in correct format', () => {
+    const product1 = { image: 't-shirt.jpg', title: 'Blue t-shirt', quantity: 1, price: 11.9 }
+    const product2 = { image: 'bag.jpg', title: 'Black bag', quantity: 1, price: 21 }
+
+    render(<MemoryRouter><BasketCard product={product1}/></MemoryRouter>);
+    render(<MemoryRouter><BasketCard product={product2}/></MemoryRouter>);
+
+    expect(screen.getByText('£11.90')).toBeInTheDocument();
+    expect(screen.getByText('£21.00')).toBeInTheDocument();
+  })
+
   it('displays correct pluralization', () => {
     const single = { image: null, title: '', quantity: 1, price: 11.99 }
     const multiple = { image: null, title: '', quantity: 3, price: 11.99 }

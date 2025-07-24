@@ -51,6 +51,16 @@ describe('ShopCard component', () => {
 
     expect(screen.getByText('£10.99')).toBeInTheDocument()
   })
+
+  it('displays the price in the correct format', () => {
+    const product1 =  {id: 1, title: 'T-Shirt', description: 'A red t-shirt', price: 10.9, image: 'tshirt.jpg' }
+    const product2 =  {id: 1, title: 'Bag', description: 'A leather bag', price: 15, image: 'bag.jpg' }
+    render(<MemoryRouter><ShopCard product={product1}/></MemoryRouter>)
+    render(<MemoryRouter><ShopCard product={product2}/></MemoryRouter>)
+    
+    expect(screen.getByText('£10.90')).toBeInTheDocument();
+    expect(screen.getByText('£15.00')).toBeInTheDocument();
+  })
   
   describe('Adding product to basket button', () => {
     it('calls the handleAddToBasket function with correct product and quantity', async () => {

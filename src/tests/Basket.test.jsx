@@ -67,5 +67,16 @@ describe('Basket Component', () => {
       
       expect(screen.getByText('Total: £57.97')).toBeInTheDocument();
     })
+
+    it('shows basket total in correct format', () => {
+      const basket = [
+        {id: 1, title: 'Shorts', description: 'A pair of blue shorts', price: 10.1, image: 'shorts.jpg', quantity: 1},
+        {id: 2, title: 'Shoes', description: 'A pair of black shoes', price: 12.2, image: 'shoes.jpg', quantity: 1},
+      ] 
+      basketMock.mockReturnValueOnce(basket)
+      render(<MemoryRouter><Basket/></MemoryRouter>)
+    
+      expect(screen.getByText(/£22.30/)).toBeInTheDocument()
+    })
   })
 })
