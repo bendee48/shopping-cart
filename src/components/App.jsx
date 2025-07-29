@@ -65,11 +65,22 @@ function App() {
     setBasket(filteredProducts);
   }
 
+  function handleDecreaseItemQuantity(id) {
+    const newBasket = basket.map(product => {
+      if (product.id == id) {
+        return {...product, quantity: product.quantity - 1}
+      } else {
+        return product;
+      }
+    })
+    setBasket(newBasket)
+  }
+
   return (
     <div className={styles.app}>
       <Navbar basketCount={basketCount}/>
       <div className={styles.outlet}>
-        <Outlet context={{basket, handleAddToBasket, handleRemoveFromBasket}}/>
+        <Outlet context={{basket, handleAddToBasket, handleRemoveFromBasket, handleDecreaseItemQuantity}}/>
       </div>
     </div>
   )

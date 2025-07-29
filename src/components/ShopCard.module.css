@@ -56,13 +56,8 @@
 }
 
 .card_btn {
-  border-radius: 3px;
-  border: 1px solid transparent;
   padding: 0.5em 1em;
-  font-family: inherit;
-  cursor: pointer;
   background-color: #bfb6ed;
-  transition: border-color 0.25s;
 }
 
 .card_btn:hover {

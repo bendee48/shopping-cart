@@ -42,6 +42,14 @@ ul {
   list-style-type: none;
 }
 
+button {
+  border-radius: 3px;
+  border: 1px solid transparent;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
 /* Global Stylings */
 
 .container {

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styles from "./BasketCard.module.css"
 import { useOutletContext } from "react-router-dom";
 
@@ -16,15 +17,34 @@ import { useOutletContext } from "react-router-dom";
  * @returns {JSX.Element} The rendered basket card component.
  */
 function BasketCard({product}) {
-  const { handleRemoveFromBasket } = useOutletContext();
+  const { handleRemoveFromBasket, handleAddToBasket, handleDecreaseItemQuantity } = useOutletContext();
+  const [itemQuantity, setItemQuantity] = useState(product.quantity);
+  const isDisabled = product.quantity <= 1;
+
+  function handleIncrement() {
+    setItemQuantity(n => n + 1);
+    handleAddToBasket(product, 1);
+  }
+
+  function handleDecrement() {
+    if (itemQuantity > 1) {
+      setItemQuantity(n => n - 1);
+      handleDecreaseItemQuantity(product.id);
+    }
+  }
 
   return (
     <div data-testid='basket-card' className={styles.basket_card}>
       <img className={styles.bcard_image} src={product.image} alt={product.title} />
       <h2 className={styles.bcard_title}>{product.title}</h2>
-      <p className={styles.bcard_items}>{product.quantity} item{product.quantity > 1 ? 's' : ''}</p>
+      {/* <p className={styles.bcard_items}>{product.quantity} item{product.quantity > 1 ? 's' : ''}</p> */}
+      <div className={styles.item_quantity}>
+        <button className={styles.decrement} onClick={handleDecrement} disabled={isDisabled}>-</button>
+        <input className={styles.bcard_input} type="number" min='1' value={itemQuantity} readOnly/>
+        <button className={styles.increment} onClick={handleIncrement}>+</button>
+      </div>
       <p className={styles.bcard_price}>£{(product.quantity * product.price).toFixed(2)}</p>
-      <button onClick={() => {
+      <button className={styles.bcard_btn} name="delete" onClick={() => {
         handleRemoveFromBasket(product.id)
       }}>
         Del

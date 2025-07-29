@@ -3,7 +3,6 @@
   height: 8rem;
   align-items: center;
   gap: 1em;
-  /* border: 1px solid blue; */
 }
 
 .bcard_image {
@@ -14,12 +13,78 @@
 .bcard_title {
   font-size: 0.9rem;
   margin-right: auto;
+  max-width: 350px;
 }
 
 .bcard_price {
   font-size: 0.9rem;
+  min-width: 6em;
+  text-align: center;
 }
 
 .bcard_items {
   font-size: 0.8rem;
+  font-style: italic;
 }
+
+.bcard_btn {
+  background-color: rgba(214, 27, 64, 0.413);
+  padding: 0.2em 1em;
+}
+
+.bcard_btn:hover {
+  background-color: rgba(214, 27, 64, 0.713);
+  color: #fff;
+  border-color: rgb(135, 135, 135);
+}
+
+.bcard_input {
+  -moz-appearance: textfield;
+}
+
+.bcard_input::-webkit-outer-spin-button,
+.bcard_input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.item_quantity {
+  display: flex;
+  gap: 0.2em;
+  min-width: 60px;
+}
+
+.item_quantity > input {
+  width: 100%;
+  flex: 2 1 0;
+  min-width: 0; /* prevent stretching */
+  max-width: 7em;
+  text-align: center;
+}
+
+.item_quantity > button {
+  flex: 1 1 0;
+}
+
+.decrement:disabled,
+.decrement:disabled:hover {
+  cursor: not-allowed;
+  background-color: #d3d3d3;
+  border-color: transparent;
+  color: inherit;
+}
+
+.increment,
+.decrement {
+  padding: 0.2em 0.5em;
+  background-color: #bfb6ed;
+}
+
+.increment:hover,
+.decrement:hover {
+  border-color: #646cff;
+  background-color: #8879d1;
+  color: white;
+}
+
+

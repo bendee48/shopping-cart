@@ -5,13 +5,17 @@ import userEvent from "@testing-library/user-event"
 import BasketCard from '../components/BasketCard';
 
 const handleRemoveFromBasketMock = vi.fn();
+const handleAddToBasketMock = vi.fn();
+const handleDecreaseItemQuantityMock = vi.fn();
 // Mocking useOutletContext
 vi.mock(import('react-router-dom'), async (importOriginal) => {
   const original = await importOriginal();
   return {
     ...original,
     useOutletContext: () => ({
-      handleRemoveFromBasket: handleRemoveFromBasketMock
+      handleRemoveFromBasket: handleRemoveFromBasketMock,
+      handleAddToBasket: handleAddToBasketMock,
+      handleDecreaseItemQuantity: handleDecreaseItemQuantityMock
     })
   }
 })
@@ -44,8 +48,8 @@ describe('BasketCard component', () => {
     const quantity = { image: 'blueTshirt.jpg', title: 'Blue t-shirt', quantity: 2, price: 11.99 }
 
     render(<MemoryRouter><BasketCard product={quantity}/></MemoryRouter>);
-
-    expect(screen.getByText(/2 items/i)).toBeInTheDocument()
+    
+    expect(screen.getByRole('spinbutton')).toHaveValue(2)
   })
 
   it('shows correct price based on quantity of items', () => {
@@ -80,8 +84,8 @@ describe('BasketCard component', () => {
     render(<MemoryRouter><BasketCard product={single}/></MemoryRouter>);
     render(<MemoryRouter><BasketCard product={multiple}/></MemoryRouter>);
     
-    expect(screen.getByText('1 item')).toBeInTheDocument();
-    expect(screen.getByText('3 items')).toBeInTheDocument();
+    expect(screen.getAllByRole('spinbutton')[0]).toHaveValue(1)
+    expect(screen.getAllByRole('spinbutton')[1]).toHaveValue(3)
   })
 
   describe('removing a Basket Card', () => {
@@ -101,6 +105,34 @@ describe('BasketCard component', () => {
       await user.click(delBtn)
       
       expect(handleRemoveFromBasketMock).toHaveBeenCalledWith(1);
+    })
+  })
+
+  describe('changing product quantity', () => {
+    describe('increasing the product quantity', () => {
+      it('calls the handleAddToBasket function, with a product and quantity', async () => {
+        const user = userEvent.setup();
+        const product = { id: 1, image: 't-shirt.jpg', title: 'Blue t-shirt', quantity: 1, price: 11.99 }
+        render(<MemoryRouter><BasketCard product={product}/></MemoryRouter>);
+
+        const incrementBtn = screen.getByRole('button', { name: '+'})
+        await user.click(incrementBtn)
+        
+        expect(handleAddToBasketMock).toHaveBeenCalledWith(product, 1)
+      })
+    })
+
+    describe('decreasing the product quantity', () => {
+      it('calls the handleDecreaseItemQuantity handler with product id', async () => {
+        const user = userEvent.setup();
+        const product = { id: 99, image: 'jumper.jpg', title: 'Purple Jumper', quantity: 5, price: 39.99 }
+        render(<MemoryRouter><BasketCard product={product}/></MemoryRouter>);
+
+        const decrementBtn = screen.getByRole('button', { name: '-'})
+        await user.click(decrementBtn)
+        
+        expect(handleDecreaseItemQuantityMock).toHaveBeenCalledWith(99);
+      })
     })
   })
 })

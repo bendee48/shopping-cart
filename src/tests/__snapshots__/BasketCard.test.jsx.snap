@@ -16,20 +16,37 @@ exports[`BasketCard component > renders a BasketCard 1`] = `
     >
       Blue t-shirt
     </h2>
-    <p
-      class="_bcard_items_12a1d9"
+    <div
+      class="_item_quantity_12a1d9"
     >
-      2
-       item
-      s
-    </p>
+      <button
+        class="_decrement_12a1d9"
+      >
+        -
+      </button>
+      <input
+        class="_bcard_input_12a1d9"
+        min="1"
+        readonly=""
+        type="number"
+        value="2"
+      />
+      <button
+        class="_increment_12a1d9"
+      >
+        +
+      </button>
+    </div>
     <p
       class="_bcard_price_12a1d9"
     >
       £
       23.98
     </p>
-    <button>
+    <button
+      class="_bcard_btn_12a1d9"
+      name="delete"
+    >
       Del
     </button>
   </div>
