@@ -45,8 +45,8 @@ function ShopCard({product}) {
       <p className={styles.card_price}>£{product.price.toFixed(2)}</p>
       <form className={styles.card_form} onSubmit={handleSubmit}>
         {/* use defaultValue to access current value from ref */}
-        <input className={styles.card_input} id={styles.amount} type="number" min='1' ref={inputRef} defaultValue="1"/>
-        <button className={styles.card_btn}>Add</button>
+        <input className={styles.card_input} id={styles.amount} name="input" type="number" min='1' ref={inputRef} defaultValue="1"/>
+        <button className={styles.card_btn} name="add-btn">Add</button>
       </form>
     </div>
   )

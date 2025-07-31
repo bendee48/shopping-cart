@@ -39,9 +39,9 @@ function BasketCard({product}) {
       <h2 className={styles.bcard_title}>{product.title}</h2>
       {/* <p className={styles.bcard_items}>{product.quantity} item{product.quantity > 1 ? 's' : ''}</p> */}
       <div className={styles.item_quantity}>
-        <button className={styles.decrement} onClick={handleDecrement} disabled={isDisabled}>-</button>
-        <input className={styles.bcard_input} type="number" min='1' value={itemQuantity} readOnly/>
-        <button className={styles.increment} onClick={handleIncrement}>+</button>
+        <button className={styles.decrement} name="decrement" onClick={handleDecrement} disabled={isDisabled}>-</button>
+        <input className={styles.bcard_input} name="bcard-input" type="number" min='1' value={itemQuantity} readOnly/>
+        <button className={styles.increment} name="increment" onClick={handleIncrement}>+</button>
       </div>
       <p className={styles.bcard_price}>£{(product.quantity * product.price).toFixed(2)}</p>
       <button className={styles.bcard_btn} name="delete" onClick={() => {
