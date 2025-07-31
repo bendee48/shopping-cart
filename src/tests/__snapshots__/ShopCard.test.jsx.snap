@@ -36,11 +36,13 @@ exports[`ShopCard component > renders a ShopCard 1`] = `
             class="_card_input_fad0e2"
             id="_amount_fad0e2"
             min="1"
+            name="input"
             type="number"
             value="1"
           />
           <button
             class="_card_btn_fad0e2"
+            name="add-btn"
           >
             Add
           </button>
@@ -80,11 +82,13 @@ exports[`ShopCard component > renders a ShopCard 1`] = `
           class="_card_input_fad0e2"
           id="_amount_fad0e2"
           min="1"
+          name="input"
           type="number"
           value="1"
         />
         <button
           class="_card_btn_fad0e2"
+          name="add-btn"
         >
           Add
         </button>

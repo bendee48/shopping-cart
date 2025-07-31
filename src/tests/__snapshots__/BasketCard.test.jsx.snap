@@ -21,18 +21,21 @@ exports[`BasketCard component > renders a BasketCard 1`] = `
     >
       <button
         class="_decrement_12a1d9"
+        name="decrement"
       >
         -
       </button>
       <input
         class="_bcard_input_12a1d9"
         min="1"
+        name="bcard-input"
         readonly=""
         type="number"
         value="2"
       />
       <button
         class="_increment_12a1d9"
+        name="increment"
       >
         +
       </button>
