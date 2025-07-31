@@ -346,9 +346,7 @@ describe('App integration tests', () => {
 
         expect(screen.getByRole('spinbutton')).toHaveValue(1)
         expect(screen.getByRole('button', { name: '-' })).toBeDisabled();
-        screen.debug()
       })
     })
-
   })
 });
