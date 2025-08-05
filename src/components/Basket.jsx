@@ -18,8 +18,9 @@ function Basket() {
    * - `title`: string
    * - `price`: number
    * - `quantity`: number
+   * Gets the `setBasket` function
    */
-  const { basket } = useOutletContext()
+  const { basket, setBasket } = useOutletContext()
   let basketTotal = null;
 
   /**
@@ -51,6 +52,14 @@ function Basket() {
       { basket.map(product => <BasketCard key={product.id} product={product} />) }
       <hr />
       <div data-testid='basket-total' className={styles.basket_total}>Total: £{basketTotal.toFixed(2)}</div>
+      <button className={styles.checkout_btn} onClick={()=> {
+        alert(
+          'Your items are on the way! That\'s right they\'re FREE!' +
+          ' The only caveat is that we guess your delivery address.' +
+          ' Fingers crossed!'
+        )
+        setBasket([])
+      }}>Checkout</button>
     </div>
   )
 }

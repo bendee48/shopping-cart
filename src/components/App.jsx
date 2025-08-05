@@ -80,7 +80,7 @@ function App() {
     <div className={styles.app}>
       <Navbar basketCount={basketCount}/>
       <div className={styles.outlet}>
-        <Outlet context={{basket, handleAddToBasket, handleRemoveFromBasket, handleDecreaseItemQuantity}}/>
+        <Outlet context={{basket, setBasket, handleAddToBasket, handleRemoveFromBasket, handleDecreaseItemQuantity}}/>
       </div>
     </div>
   )
