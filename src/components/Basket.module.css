@@ -30,3 +30,13 @@
 .shop_link:hover {
   text-decoration: underline;
 }
+
+/* Media Queries */
+
+@media (max-width: 600px) {
+  .shop_link_text {
+    text-align: center;
+    margin-top: 1em;
+    font-size: 1.3rem;
+  }
+}

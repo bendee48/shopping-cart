@@ -47,3 +47,11 @@
   color: #5d17b7;
   background-color: rgba(152, 152, 254, 0.2);
 }
+
+/* Media Queries */
+
+@media (max-width: 600px) {
+  .shop_btn {
+    padding: 0.5em 1.5em;
+  }
+}

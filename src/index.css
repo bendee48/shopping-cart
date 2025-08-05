@@ -58,3 +58,11 @@ button {
   margin: 0 auto;
 }
 
+/* Media Queries */
+
+@media (max-width: 600px) {
+  .container {
+    width: 80%;
+  }
+}
+

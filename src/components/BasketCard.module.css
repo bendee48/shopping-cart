@@ -86,4 +86,29 @@
   color: white;
 }
 
+/* Media Queries*/
+
+@media (max-width: 600px) {
+  .basket_card {
+    flex-direction: column;
+    height: auto;
+    border-bottom: 1px solid gray;
+  }
+
+  .bcard_title {
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .bcard_btn {
+    padding: 0.5em 1.5em;
+    margin-bottom: 2em;
+  }
+
+  .item_quantity > input {
+    min-width: 80px;
+    max-width: 150px;
+  }
+}
+
 
