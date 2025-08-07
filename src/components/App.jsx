@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Outlet } from "react-router-dom"
 import Navbar from '../components/Navbar'
-import styles from './app.module.css'
+import styles from './App.module.css'
 
 /**
  * App component for the shopping cart application.
