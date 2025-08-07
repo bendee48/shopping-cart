@@ -1,12 +1,23 @@
-# React + Vite
+# Shopping App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## React, JavaScript, HTML and CSS
 
-Currently, two official plugins are available:
+React - (project idea via the [Odin Project](https://www.theodinproject.com/lessons/react-new-shopping-cart)).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Features
+  - Single Page Application
+  - Simple shop app
+  - Display items via an API with the ability to add products to a basket
 
-## Expanding the ESLint configuration
+### Objectives of Project
+  - More practice with React
+  - Making an SPA with routing (react-router-dom etc)
+  - Comprehensively testing the app (vitest etc)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Built with
+  - React
+  - HTML
+  - CSS
+  - JavaScript
+
+  [Live Version](//)
