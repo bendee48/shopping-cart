@@ -2,7 +2,7 @@
   height: 100%;
   display: flex;
   justify-content: center;
-  background-image: url("./src/assets/homepage.jpg");
+  background-image: url("/homepage.jpg");
   background-size: cover;
   background-position: center;
   align-items: center;
