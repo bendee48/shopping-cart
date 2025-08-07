@@ -20,4 +20,4 @@ React - (project idea via the [Odin Project](https://www.theodinproject.com/less
   - CSS
   - JavaScript
 
-  [Live Version](//)
+  [Live Version](https://shopcartspa.netlify.app/)
